@@ -7,7 +7,7 @@ export interface IFooterProps {
 
 export function Footer(props: IFooterProps) {
   return (
-    <div className='bg-white w-full'>
+    <div className='bg-white w-full border-t-2 border-zinc-200'>
       <MainWrapper>
         <div className='w-full py-8 flex flex-col items-center gap-4'>
           <Image src='/images/logo2.png' alt='Logo' width={73} height={80} />
