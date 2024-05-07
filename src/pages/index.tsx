@@ -1,118 +1,117 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { Header } from "@/components/Header";
+import { MainWrapper } from "@/components/MainWrapper";
+import { Card1 } from "@/components/Card1";
+import { Footer } from "@/components/Footer";
+import { SideImage } from "@/components/SideImage";
+import { Card2 } from "@/components/Card2";
+import { MainButton } from "@/components/MainButton";
+import { MainButton2 } from "@/components/MainButton2";
+import { BenefitItem } from "@/components/BenefitItem";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+})
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={`${poppins.className}`}>
+      <Header />
+      <main className="pt-[75px]">
+        <MainWrapper>
+          <div className="h-[600px] flex ">
+            <div className="w-1/2 h-full pt-40">
+              <h1 className="w-[80%] text-4xl font-semibold mb-8">Transforme Seu Negócio com o ESAAS</h1>
+              <p className="w-[80%] text-zinc-500 text-base font-semibold mb-5">A Solução que Cabe no Seu Bolso! Apenas R$25,00 por Licença Mensal e Usuário a Custo Zero!</p>
+              <MainButton />
+            </div>
+            <div className="w-1/2 h-full flex justify-end items-end">
+              <Image className="h-fit" src={"/images/woman.png"} alt="Imagem slogan" width={558} height={515} />
+            </div>
+          </div>
+        </MainWrapper>
+
+        <div className="w-full h-[600px] bg-zinc-100 pt-20">
+          <MainWrapper>
+            <h2 className="text-center text-2xl mb-20 text-main-primary-500">Por que Escolher o ESAAS?</h2>
+            <div className="flex justify-between gap-8">
+              <Card1 title="Economia para o Seu Negócio" description="Tenha acesso a uma solução de gestão completa por apenas R$25,00 por licença, ajudando a reduzir os custos operacionais." />
+              <Card1 title="Acesso Livre para os Usuários" description="Usuários adicionais não representam custo extra. Convide quantos colaboradores precisar, sem impacto no seu orçamento." />
+              <Card1 title="Flexibilidade e Escalabilidade" description="Adapte-se facilmente às necessidades do seu negócio, crescendo de forma escalável e sem preocupações financeiras." />
+            </div>
+            <div className="w-full flex justify-center mt-10">
+              <MainButton2 />
+            </div>
+
+          </MainWrapper>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <MainWrapper>
+          <SideImage
+            title="Servidores ultra-seguros e confiáveis"
+            description="Garantindo a Estabilidade e Proteção do seu Negócio."
+            imgName="bg-img-database"
+            alt="" />
+          <SideImage
+            title="Amplamente aprovado por nossos clientes"
+            imgName="bg-img-clientes"
+            description="Mais de 10 mil empresas confiam no ESAAS para impulsionar seu sucesso!"
+            alt=""
+            invert={true} />
+          <SideImage
+            title="Sua marca, sua identidade"
+            description="Tenha um sistema de gestão completo com a identidade da sua marca, sem se preocupar com o desenvolvimento ou manutenção!"
+            imgName="bg-img-erp"
+            alt="" />
+        </MainWrapper>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div id="funcionalidades" className="w-full h-[800px] bg-main-secondary-800 pt-20">
+          <MainWrapper>
+            <h2 className="text-center text-2xl mb-20 text-white">Conheça noossas principais funcionalidades</h2>
+            <div className="w-full flex justify-center">
+              <div className="flex flex-col max-w-[700px] w-full gap-2">
+                <Card2 title="Cadastros Básicos" />
+                <Card2 title="Compras - Notas de Entrada, Cotações e Ordens de Compras" />
+                <Card2 title="Estoque - Cadastro de Produtos/Serviços, Movimentações e Outros" />
+                <Card2 title="Financeiro Avançado" />
+                <Card2 title="Financeiro Básico" />
+                <Card2 title="Vendas - Pedidos/Orçamentos e Ordens de Serviço" />
+                <Card2 title="PDV - Frente de Caixa" />
+                <Card2 title="Nota Fiscal Eletrônica" />
+              </div>
+            </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          </MainWrapper>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+        <div id="preco" className="w-full h-[800px] bg-white pt-20">
+          <MainWrapper>
+            <h2 className="text-center text-2xl mb-20 text-main-primary-500">Uma solução que cabe no seu bolso!</h2>
+            <div className="w-full flex justify-center">
+              <div className="shadow-xl rounded-xl p-6 max-w-[600px] w-full">
+                <h3 className="text-4xl font-semibold text-center">Licença Mensal</h3>
+                <p className="text-center text-zinc-600">Por apenas <span className="text-main-primary-500 text-2xl font-semibold">R$ 25,00</span>/mês</p>
+                <div className="relative flex py-3 items-center">
+                  <div className="flex-grow border-t border-zync-300"></div>
+                </div>
+                <p className="text-sm">Benefícios incluídos:</p>
+                <BenefitItem title="ERP Completo" description="Tenha acesso a todas as funcionalidades do ESAAS para gerenciar seu negócio de forma eficiente." />
+                <BenefitItem title="Painel de Licenças" description="Controle e gerencie suas licenças de forma centralizada e intuitiva."/>
+                <BenefitItem title="Hospedagem Segura" description="Mantenha seus dados protegidos em servidores seguros e confiáveis."/>
+                <BenefitItem title="Treinamentos Inclusos" description="Capacite sua equipe com treinamentos especializados para tirar o máximo proveito da plataforma."/>
+                <BenefitItem title="Suporte Especializado" description="Conte com suporte técnico especializado durante o horário comercial para resolver suas dúvidas e questões."/>
+              </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            </div>
+
+          </MainWrapper>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
