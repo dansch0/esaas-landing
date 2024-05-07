@@ -21,6 +21,9 @@ const config: Config = {
         'main-primary-500': '#0A76BF',
         'main-primary-600': '#0a5d96',
         'main-secondary-800': '#233440',
+      },
+      boxShadow:{
+        'card': '0 0 20px 0px rgba(0, 0, 0, 0.15)'
       }
     },
   },

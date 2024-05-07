@@ -9,6 +9,10 @@ import { Card2 } from "@/components/Card2";
 import { MainButton } from "@/components/MainButton";
 import { MainButton2 } from "@/components/MainButton2";
 import { BenefitItem } from "@/components/BenefitItem";
+import { LuMoveRight } from "react-icons/lu";
+import { FiPhone } from "react-icons/fi";
+import { ContactItem } from "@/components/ContactItem";
+import { MdOutlineEmail } from "react-icons/md";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -19,7 +23,7 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <div className={`${poppins.className}`}>
+    <div id="inicio" className={`${poppins.className}`}>
       <Header />
       <main className="pt-[75px]">
         <MainWrapper>
@@ -88,28 +92,57 @@ export default function Home() {
           </MainWrapper>
         </div>
 
-        <div id="preco" className="w-full h-[800px] bg-white pt-20">
+        <div id="preco" className="w-full h-[900px] bg-white pt-20">
           <MainWrapper>
             <h2 className="text-center text-2xl mb-20 text-main-primary-500">Uma solução que cabe no seu bolso!</h2>
             <div className="w-full flex justify-center">
-              <div className="shadow-xl rounded-xl p-6 max-w-[600px] w-full">
+              <div className="shadow-card rounded-xl p-6 max-w-[600px] w-full">
                 <h3 className="text-4xl font-semibold text-center">Licença Mensal</h3>
                 <p className="text-center text-zinc-600">Por apenas <span className="text-main-primary-500 text-2xl font-semibold">R$ 25,00</span>/mês</p>
                 <div className="relative flex py-3 items-center">
                   <div className="flex-grow border-t border-zync-300"></div>
                 </div>
-                <p className="text-sm">Benefícios incluídos:</p>
                 <BenefitItem title="ERP Completo" description="Tenha acesso a todas as funcionalidades do ESAAS para gerenciar seu negócio de forma eficiente." />
-                <BenefitItem title="Painel de Licenças" description="Controle e gerencie suas licenças de forma centralizada e intuitiva."/>
-                <BenefitItem title="Hospedagem Segura" description="Mantenha seus dados protegidos em servidores seguros e confiáveis."/>
-                <BenefitItem title="Treinamentos Inclusos" description="Capacite sua equipe com treinamentos especializados para tirar o máximo proveito da plataforma."/>
-                <BenefitItem title="Suporte Especializado" description="Conte com suporte técnico especializado durante o horário comercial para resolver suas dúvidas e questões."/>
+                <BenefitItem title="Painel de Licenças" description="Controle e gerencie suas licenças de forma centralizada e intuitiva." />
+                <BenefitItem title="Hospedagem Segura" description="Mantenha seus dados protegidos em servidores seguros e confiáveis." />
+                <BenefitItem title="Treinamentos Inclusos" description="Capacite sua equipe com treinamentos especializados para tirar o máximo proveito da plataforma." />
+                <BenefitItem title="Suporte Especializado" description="Conte com suporte técnico especializado durante o horário comercial para resolver suas dúvidas e questões." />
+                <div className="w-full flex justify-center mt-7">
+                  <MainButton2 />
+                </div>
+                
               </div>
-
             </div>
 
           </MainWrapper>
         </div>
+
+        <div id="contato" className="w-full h-[700px] bg-white pt-20">
+          <MainWrapper>
+            <div className={'flex h-[500px]'}>
+              <div className='w-1/2 flex flex-col justify-center items-center'>
+                <h3 className='text-4xl font-semibold text-main-primary-500 w-10/12 text-center'>Ficou com alguma dúvida?</h3>
+                <p className='text-main-primary-500 text-2xl w-10/12 text-center'>Entre em contato com a gente!</p>
+                <LuMoveRight className="text-6xl text-main-secondary-800" />
+              </div>
+              <div className='w-1/2 overflow-hidden bg-main-secondary-800 rounded-2xl p-12 flex items-center'>
+                <div className="w-full">
+                  <ContactItem icon={<FiPhone />} title="Telefone" contact="51999999999" description="Atendemos na segunda a sexta das 8 as 20h e aos sábados de 8 as 12h através do número abaixo." />
+                  <div className="relative py-4">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-b border-gray-500"></div>
+                    </div>
+                    <div className="relative flex justify-center">
+                      <span className="bg-main-secondary-800 px-4 text-sm text-gray-500">ou também</span>
+                    </div>
+                  </div>
+                  <ContactItem icon={<MdOutlineEmail />} title="Email" contact="contato@esaas.com" description="Ficou com alguma dúvida? Entre em contato com a gente pelo nosso email." />
+                </div>
+              </div>
+            </div>
+          </MainWrapper>
+        </div>
+
       </main>
       <Footer />
     </div>
