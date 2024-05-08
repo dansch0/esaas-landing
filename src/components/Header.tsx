@@ -3,6 +3,7 @@ import { MainWrapper } from './MainWrapper';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MainButton } from './MainButton';
+import { HeaderLink } from './HeaderLink';
 
 export interface IHeaderProps {
 }
@@ -16,12 +17,12 @@ export function Header (props: IHeaderProps) {
                     <Image src='/images/logo.png' alt='Logo' width={41} height={57} />
                 </div>
                 <div className='h-full flex items-center gap-8'>
-                    <Link href="#inicio" scroll={false} className='text-black font-semibold'>Início</Link>
-                    <Link href="#funcionalidades" className='text-black font-semibold'>Funcionalidades</Link>
-                    <Link href="#preco" className='text-black font-semibold'>Preço</Link>
-                    <Link href="#contato" className='text-black font-semibold'>Contato</Link>
+                    <HeaderLink href="#inicio" text='Início'/>
+                    <HeaderLink href="#funcionalidades" text='Funcionalidades'/>
+                    <HeaderLink href="#preco" text='Preço'/>
+                    <HeaderLink href="#contato" text='Contato'/>
                     <MainButton/>
-                    <Link href="#" className='text-black font-semibold'>Entrar</Link>
+                    <HeaderLink href="#c" text='Entrar'/>
                 </div>
             </div>
             

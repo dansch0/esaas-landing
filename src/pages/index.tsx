@@ -13,6 +13,10 @@ import { LuMoveRight } from "react-icons/lu";
 import { FiPhone } from "react-icons/fi";
 import { ContactItem } from "@/components/ContactItem";
 import { MdOutlineEmail } from "react-icons/md";
+import { Subtitle } from "@/components/Subtitle";
+import { FaRegUser } from "react-icons/fa";
+import { FiTrendingUp } from "react-icons/fi";
+import { PiHandCoins  } from "react-icons/pi";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -27,10 +31,10 @@ export default function Home() {
       <Header />
       <main className="pt-[75px]">
         <MainWrapper>
-          <div className="h-[600px] flex ">
+          <div className="h-[600px] flex bg-gradient-radial">
             <div className="w-1/2 h-full pt-40">
               <h1 className="w-[80%] text-4xl font-semibold mb-8">Transforme Seu Negócio com o ESAAS</h1>
-              <p className="w-[80%] text-zinc-500 text-base font-semibold mb-5">A Solução que Cabe no Seu Bolso! Apenas R$25,00 por Licença Mensal e Usuário a Custo Zero!</p>
+              <p className="w-[80%] text-zinc-500 text-base font-semibold mb-5">No ESAAS, Oferecemos uma Abordagem Prática e Eficiente para Gerenciar seu Negócio, Permitindo que Você Se Concentre no que Realmente Importa: Seu Sucesso!</p>
               <MainButton />
             </div>
             <div className="w-1/2 h-full flex justify-end items-end">
@@ -39,13 +43,13 @@ export default function Home() {
           </div>
         </MainWrapper>
 
-        <div className="w-full h-[600px] bg-zinc-100 pt-20">
+        <div className="w-full h-[700px] bg-gradient-radial pt-20 border-t-2 border-b-2 border-zinc-200 ">
           <MainWrapper>
-            <h2 className="text-center text-2xl mb-20 text-main-primary-500">Por que Escolher o ESAAS?</h2>
+            <Subtitle color="text-main-primary-500" text="Por que Escolher o ESAAS?" />
             <div className="flex justify-between gap-8">
-              <Card1 title="Economia para o Seu Negócio" description="Tenha acesso a uma solução de gestão completa por apenas R$25,00 por licença, ajudando a reduzir os custos operacionais." />
-              <Card1 title="Acesso Livre para os Usuários" description="Usuários adicionais não representam custo extra. Convide quantos colaboradores precisar, sem impacto no seu orçamento." />
-              <Card1 title="Flexibilidade e Escalabilidade" description="Adapte-se facilmente às necessidades do seu negócio, crescendo de forma escalável e sem preocupações financeiras." />
+              <Card1 icon={<PiHandCoins />} title="Economia para o Seu Negócio" description="Tenha acesso a uma solução de gestão completa por apenas R$25,00 por licença, ajudando a reduzir os custos operacionais." />
+              <Card1 icon={<FaRegUser/>} title="Acesso Livre para os Usuários" description="Usuários adicionais não representam custo extra. Convide quantos colaboradores precisar, sem impacto no seu orçamento." />
+              <Card1 icon={<FiTrendingUp/>} title="Flexibilidade e Escalabilidade" description="Adapte-se facilmente às necessidades do seu negócio, crescendo de forma escalável e sem preocupações financeiras." />
             </div>
             <div className="w-full flex justify-center mt-10">
               <MainButton2 />
@@ -75,7 +79,7 @@ export default function Home() {
 
         <div id="funcionalidades" className="w-full h-[800px] bg-main-secondary-800 pt-20">
           <MainWrapper>
-            <h2 className="text-center text-2xl mb-20 text-white">Conheça noossas principais funcionalidades</h2>
+            <Subtitle color="text-white" text="Conheça noossas principais funcionalidades" />
             <div className="w-full flex justify-center">
               <div className="flex flex-col max-w-[700px] w-full gap-2">
                 <Card2 title="Cadastros Básicos" />
@@ -92,11 +96,11 @@ export default function Home() {
           </MainWrapper>
         </div>
 
-        <div id="preco" className="w-full h-[900px] bg-white pt-20">
+        <div id="preco" className="w-full h-[900px] bg-main-primary-500 pt-20">
           <MainWrapper>
-            <h2 className="text-center text-2xl mb-20 text-main-primary-500">Uma solução que cabe no seu bolso!</h2>
-            <div className="w-full flex justify-center">
-              <div className="shadow-card rounded-xl p-6 max-w-[600px] w-full">
+            <Subtitle color="text-white" text="Uma solução que cabe no seu bolso" />
+            <div className="w-full flex justify-center ">
+              <div className="shadow-card rounded-xl px-8 py-10 max-w-[600px] w-full bg-white">
                 <h3 className="text-4xl font-semibold text-center">Licença Mensal</h3>
                 <p className="text-center text-zinc-600">Por apenas <span className="text-main-primary-500 text-2xl font-semibold">R$ 25,00</span>/mês</p>
                 <div className="relative flex py-3 items-center">
@@ -133,7 +137,7 @@ export default function Home() {
                       <div className="w-full border-b border-gray-500"></div>
                     </div>
                     <div className="relative flex justify-center">
-                      <span className="bg-main-secondary-800 px-4 text-sm text-gray-500">ou também</span>
+                      <span className="bg-main-secondary-800 px-4 text-sm text-gray-500">ou</span>
                     </div>
                   </div>
                   <ContactItem icon={<MdOutlineEmail />} title="Email" contact="contato@esaas.com" description="Ficou com alguma dúvida? Entre em contato com a gente pelo nosso email." />
