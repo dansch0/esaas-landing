@@ -10,8 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(at top,#F0F3F7,#F0F3F7,#ffffff,#ffffff)",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-price": "linear-gradient(180deg, #4da6d7, #0a76bf)",
 
         "img-database": "url('/images/database.png')",
         "img-clientes": "url('/images/clientes.png')",

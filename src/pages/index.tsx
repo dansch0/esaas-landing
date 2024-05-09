@@ -12,11 +12,16 @@ import { BenefitItem } from "@/components/BenefitItem";
 import { LuMoveRight } from "react-icons/lu";
 import { FiPhone } from "react-icons/fi";
 import { ContactItem } from "@/components/ContactItem";
-import { MdOutlineEmail } from "react-icons/md";
+import { MdAttachMoney, MdOutlineEmail } from "react-icons/md";
 import { Subtitle } from "@/components/Subtitle";
 import { FaRegUser } from "react-icons/fa";
 import { FiTrendingUp } from "react-icons/fi";
 import { PiHandCoins  } from "react-icons/pi";
+import { TbShoppingCart } from "react-icons/tb";
+import { BsBoxSeam, BsGraphUpArrow, BsTags } from "react-icons/bs";
+import { VscTools } from "react-icons/vsc";
+import { GoGear, GoStack } from "react-icons/go";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -61,56 +66,60 @@ export default function Home() {
         <MainWrapper>
           <SideImage
             title="Servidores ultra-seguros e confiáveis"
-            description="Garantindo a Estabilidade e Proteção do seu Negócio."
+            description="Com servidores ultra-seguros e confiáveis na nuvem, fornecidos pela AWS Amazon, nossa plataforma white label de software SaaS oferece uma infraestrutura sólida para seu negócio. A segurança de nossos servidores protege os dados com padrões avançados, fornecendo criptografia, backups regulares e monitoramento constante. Isso garante a integridade e disponibilidade contínua dos seus serviços, mantendo a confiança de seus clientes. Ao adotar nossa solução, você obtém a tranquilidade necessária para se concentrar no crescimento, enquanto nós lidamos com a segurança e a confiabilidade."
             imgName="bg-img-database"
             alt="" />
           <SideImage
             title="Amplamente aprovado por nossos clientes"
             imgName="bg-img-clientes"
-            description="Mais de 10 mil empresas confiam no ESAAS para impulsionar seu sucesso!"
+            description="O eSaaS é um braço da VendaERP, empresa pioneira no fornecimento de software SaaS no Brasil. Com atuação no mercado desde 2017, a VendaERP construiu uma sólida reputação, atendendo mais de 2.000 parceiros ativos. Nosso compromisso com a excelência reflete-se na ótima avaliação no Reclame Aqui, reforçando nossa dedicação à satisfação e segurança dos clientes. Ao escolher nossa plataforma, você se beneficia de uma infraestrutura confiável e uma equipe experiente, garantindo a tranquilidade necessária para impulsionar seu sucesso. "
             alt=""
             invert={true} />
           <SideImage
             title="Sua marca, sua identidade"
-            description="Tenha um sistema de gestão completo com a identidade da sua marca, sem se preocupar com o desenvolvimento ou manutenção!"
+            description="Ao vender software SaaS com a sua marca, você fortalece a presença e o reconhecimento de sua empresa no mercado. Oferecer soluções white label permite que você personalize completamente a experiência, adaptando cores, logotipo e mensagens ao perfil do seu público. Essa flexibilidade proporciona um diferencial competitivo, promovendo um relacionamento mais próximo e confiável com seus clientes. Além disso, a identidade própria aumenta o valor percebido, gerando maior fidelidade e facilitando a expansão da sua base de clientes. Com nossa solução, você pode construir um negócio único e altamente reconhecível."
             imgName="bg-img-erp"
             alt="" />
         </MainWrapper>
 
-        <div id="funcionalidades" className="w-full h-[800px] bg-main-secondary-800 pt-20">
+        <div id="funcionalidades" className="w-full h-[1100px] bg-main-secondary-800 pt-20">
           <MainWrapper>
             <Subtitle color="text-white" text="Conheça noossas principais funcionalidades" />
             <div className="w-full flex justify-center">
-              <div className="flex flex-col max-w-[700px] w-full gap-2">
-                <Card2 title="Cadastros Básicos" />
-                <Card2 title="Compras - Notas de Entrada, Cotações e Ordens de Compras" />
-                <Card2 title="Estoque - Cadastro de Produtos/Serviços, Movimentações e Outros" />
-                <Card2 title="Financeiro Avançado" />
-                <Card2 title="Financeiro Básico" />
-                <Card2 title="Vendas - Pedidos/Orçamentos e Ordens de Serviço" />
-                <Card2 title="PDV - Frente de Caixa" />
-                <Card2 title="Nota Fiscal Eletrônica" />
+              <div className="grid grid-cols-2 gap-5 max-w-[800px] w-full">
+                <Card2 title="Fiscal" icon={<BsTags />} description="Emissão de NF-e, NFS-e, MDF-e, NFC-e, CF-e SAT. E também temos SPED Fiscal!" />
+                <Card2 title="Vendas" icon={<BsGraphUpArrow />} description="Orçamentos e pedidos, marketplaces, PDV, Loja Online, Força de vendas." />
+                <Card2 title="Compras" icon={<TbShoppingCart />} description="Ordem de compra, nota de entrada, alerta de estoque, leilão fornecedores."/>
+                <Card2 title="Estoque" icon={<BsBoxSeam />} description="Gestão de múltiplos depósitos, tabelas de preço, movimentações, catálogo."/>
+                <Card2 title="Financeiro" icon={<MdAttachMoney  />} description="Lançamentos financeiros, cobranças integradas, remessas, boletos, bancos!"/>
+                <Card2 title="Produção" icon={<GoGear />} description="Ordens de produção, estoque, insumos e matéria-prima, gestão de qualidade."/>
+                <Card2 title="Logística" icon={<VscTools />} description="Movimentações de estoque, SIGEP Web, relatórios, veículos, delivery integrado." />
+                <Card2 title="Serviços" icon={<GoStack />} description="Emissão de NFS-e, gestão de contratos, ordens de serviços, técnicos, frotas."/>
               </div>
             </div>
-
           </MainWrapper>
         </div>
 
-        <div id="preco" className="w-full h-[900px] bg-main-primary-500 pt-20">
+        <div id="preco" className="w-full h-[1000px] bg-gradient-price pt-20">
           <MainWrapper>
             <Subtitle color="text-white" text="Uma solução que cabe no seu bolso" />
             <div className="w-full flex justify-center ">
-              <div className="shadow-card rounded-xl px-8 py-10 max-w-[600px] w-full bg-white">
+              <div className="shadow-card rounded-3xl px-8 py-10 max-w-[600px] w-full bg-white">
                 <h3 className="text-4xl font-semibold text-center">Licença Mensal</h3>
                 <p className="text-center text-zinc-600">Por apenas <span className="text-main-primary-500 text-2xl font-semibold">R$ 25,00</span>/mês</p>
                 <div className="relative flex py-3 items-center">
                   <div className="flex-grow border-t border-zync-300"></div>
                 </div>
-                <BenefitItem title="ERP Completo" description="Tenha acesso a todas as funcionalidades do ESAAS para gerenciar seu negócio de forma eficiente." />
-                <BenefitItem title="Painel de Licenças" description="Controle e gerencie suas licenças de forma centralizada e intuitiva." />
-                <BenefitItem title="Hospedagem Segura" description="Mantenha seus dados protegidos em servidores seguros e confiáveis." />
-                <BenefitItem title="Treinamentos Inclusos" description="Capacite sua equipe com treinamentos especializados para tirar o máximo proveito da plataforma." />
-                <BenefitItem title="Suporte Especializado" description="Conte com suporte técnico especializado durante o horário comercial para resolver suas dúvidas e questões." />
+                <BenefitItem title="Software ERP SaaS Completo">Desfrute de todas as funcionalidades oferecidas pelo ESAAS, personalizando a interface com o nome e as cores da sua marca para um produto único que pode ser revendido facilmente.</BenefitItem>
+                <BenefitItem title="Painel de Licenças">Gerencie e monitore suas licenças de maneira simplificada, centralizando o controle de todas as licenças vendidas em um painel intuitivo.</BenefitItem>
+                <BenefitItem title="Servidores na Nuvem Seguros e Reconhecidos">Armazene seus dados com segurança em servidores robustos e reconhecidos, garantindo proteção e confiabilidade para suas operações na nuvem.</BenefitItem>
+                <BenefitItem title="Treinamentos Inclusos">
+                  Participe do nosso canal no Discord para acessar treinamentos personalizados que potencializam a produtividade e o domínio das funcionalidades do ESAAS. 
+                  <Link className="text-black underline px-1" href="https://discord.gg/">Acesse nosso Discord</Link>
+                </BenefitItem>
+                <BenefitItem title="Suporte Especializado">Conte com suporte humanizado e altamente especializado, oferecido diretamente no Discord para atender todas as suas necessidades técnicas e estratégicas. 
+                <Link className="text-black underline px-1" href="https://discord.gg/">Acesse nosso Discord</Link>
+                </BenefitItem>
                 <div className="w-full flex justify-center mt-7">
                   <MainButton2 />
                 </div>
@@ -140,7 +149,7 @@ export default function Home() {
                       <span className="bg-main-secondary-800 px-4 text-sm text-gray-500">ou</span>
                     </div>
                   </div>
-                  <ContactItem icon={<MdOutlineEmail />} title="Email" contact="contato@esaas.com" description="Ficou com alguma dúvida? Entre em contato com a gente pelo nosso email." />
+                  <ContactItem icon={<MdOutlineEmail />} title="Email" contact="comercial@esaas.com.br" description="Ficou com alguma dúvida? Entre em contato com a gente pelo nosso email." />
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@ export function Header (props: IHeaderProps) {
         <MainWrapper>
             <div className='flex justify-between h-full'>
                 <div className='h-full flex items-center'>
-                    <Image src='/images/logo.png' alt='Logo' width={41} height={57} />
+                    <Image src='/images/logo.png' alt='Logo' width={121} height={57} />
                 </div>
                 <div className='h-full flex items-center gap-8'>
                     <HeaderLink href="#inicio" text='Início'/>
