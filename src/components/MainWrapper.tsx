@@ -6,7 +6,7 @@ export interface IMainWrapperProps {
 
 export function MainWrapper (props: IMainWrapperProps) {
   return (
-    <div className='max-md:px-4 lg:max-w-[1200px] h-full m-auto'>
+    <div className='max-md:px-4 max-xl:px-8 lg:max-w-[1200px] h-full m-auto'>
       {props.children}
     </div>
   );

@@ -69,22 +69,25 @@ export default function Home() {
               title="Servidores ultra-seguros e confiáveis"
               imgName="bg-img-database"
               alt="" >
-              Com servidores ultra-seguros na nuvem da AWS Amazon, nossa plataforma white label SaaS oferece segurança avançada e confiabilidade.<br />
-              Com criptografia, backups regulares e monitoramento constante, garantimos a integridade dos seus dados e a confiança dos clientes, permitindo que você se concentre no crescimento do seu negócio.
+              Hospedada nos servidores ultra-seguros da AWS Amazon, nossa plataforma white label SaaS oferece uma infraestrutura robusta, com criptografia avançada, backups regulares e monitoramento constante.
+              <br/>
+              Essa segurança garante a integridade dos dados e a disponibilidade contínua dos serviços, permitindo que você concentre sua energia no crescimento do negócio, enquanto nós cuidamos da proteção e confiabilidade.
             </SideImage>
             <SideImage
               title="Amplamente aprovado por nossos clientes"
               imgName="bg-img-clientes"
               alt=""
               invert={true}>
-              O eSaaS, parte da VendaERP, líder em software SaaS no Brasil desde 2017, oferece uma infraestrutura confiável. Com mais de 2.000 parceiros ativos e uma excelente reputação no Reclame Aqui, nossa plataforma reflete nosso compromisso com a satisfação e segurança dos clientes.<br />
-              Escolha nossa solução para desfrutar da tranquilidade necessária para impulsionar seu sucesso, com uma equipe experiente ao seu lado.          </SideImage>
+              O eSaaS, parte da VendaERP, líder em software SaaS no Brasil desde 2017, oferece uma infraestrutura confiável. Com mais de 2.000 parceiros ativos e uma excelente reputação no Reclame Aqui, nossa plataforma reflete nosso compromisso com a satisfação e segurança dos clientes.
+              <br/>
+              Escolha nossa solução para desfrutar da tranquilidade necessária para impulsionar seu sucesso, com uma equipe experiente ao seu lado.
+            </SideImage>
             <SideImage
               title="Sua marca, sua identidade"
               imgName="bg-img-erp"
               alt="">
-              Vender software SaaS com sua marca fortalece sua presença no mercado, oferecendo soluções white label para personalizar completamente a experiência do usuário. Essa flexibilidade proporciona um diferencial competitivo ao promover um relacionamento mais próximo com os clientes, aumentando a fidelidade e facilitando a expansão da base de clientes.<br />
-              Com nossa solução, você constrói um negócio único e altamente reconhecível.
+              
+Ao vender software SaaS com sua marca, você fortalece a presença da empresa. Personalize completamente a experiência com soluções white label, criando um diferencial competitivo, relacionamento próximo com os clientes e aumento do valor percebido. Com nossa solução, construa um negócio único e altamente reconhecível.
             </SideImage>
           </div>
 
