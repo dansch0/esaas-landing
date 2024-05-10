@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as React from 'react';
 
 export interface IContactItemProps {
@@ -5,6 +6,7 @@ export interface IContactItemProps {
     title: string;
     description: string;
     contact: string;
+    href: string;
 }
 
 export function ContactItem(props: IContactItemProps) {
@@ -18,7 +20,7 @@ export function ContactItem(props: IContactItemProps) {
             <h3 className='text-white text-lg'>{props.title}</h3>
             <div className='mt-5'>
                 <p className='text-gray-300 text-sm mb-2'>{props.description}</p>
-                <p className='text-white text-sm'>{props.contact}</p>
+                <Link href={props.href} className='text-white text-sm hover:underline'>{props.contact}</Link>
             </div>
         </div>
     );

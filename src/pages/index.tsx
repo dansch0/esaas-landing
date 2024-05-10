@@ -16,7 +16,7 @@ import { MdAttachMoney, MdOutlineEmail } from "react-icons/md";
 import { Subtitle } from "@/components/Subtitle";
 import { FaRegUser } from "react-icons/fa";
 import { FiTrendingUp } from "react-icons/fi";
-import { PiHandCoins  } from "react-icons/pi";
+import { PiHandCoins } from "react-icons/pi";
 import { TbShoppingCart } from "react-icons/tb";
 import { BsBoxSeam, BsGraphUpArrow, BsTags } from "react-icons/bs";
 import { VscTools } from "react-icons/vsc";
@@ -34,27 +34,27 @@ export default function Home() {
   return (
     <div id="inicio" className={`${poppins.className}`}>
       <Header />
-      <main className="pt-[75px]">
+      <main className="w-full pt-[75px]">
         <MainWrapper>
-          <div className="h-[600px] flex bg-gradient-radial">
-            <div className="w-1/2 h-full pt-40">
-              <h1 className="w-[80%] text-4xl font-semibold mb-8">Transforme Seu Negócio com o ESAAS</h1>
-              <p className="w-[80%] text-zinc-500 text-base font-semibold mb-5">No ESAAS, Oferecemos uma Abordagem Prática e Eficiente para Gerenciar seu Negócio, Permitindo que Você Se Concentre no que Realmente Importa: Seu Sucesso!</p>
+          <div className="md:h-[600px] flex max-md:flex-col bg-gradient-radial">
+            <div className="md:w-1/2 h-full pt-40">
+              <h1 className="w-[80%] text-4xl font-semibold mb-8">Transforme Seu Negócio com o eSaaS</h1>
+              <p className="w-[80%] text-zinc-500 text-base font-semibold mb-5">No eSaaS, Oferecemos uma Abordagem Prática e Eficiente para Gerenciar seu Negócio, Permitindo que Você Se Concentre no que Realmente Importa: Seu Sucesso!</p>
               <MainButton />
             </div>
-            <div className="w-1/2 h-full flex justify-end items-end">
+            <div className="md:w-1/2 h-full flex justify-end items-end">
               <Image className="h-fit" src={"/images/woman.png"} alt="Imagem slogan" width={558} height={515} />
             </div>
           </div>
         </MainWrapper>
 
-        <div className="w-full h-[700px] bg-gradient-radial pt-20 border-t-2 border-b-2 border-zinc-200 ">
+        <div className="w-full md:h-[700px] max-md:pb-8 bg-gradient-radial pt-20 border-t-2 border-b-2 border-zinc-200 ">
           <MainWrapper>
-            <Subtitle color="text-main-primary-500" text="Por que Escolher o ESAAS?" />
-            <div className="flex justify-between gap-8">
+            <Subtitle color="text-main-primary-500" text="Por que Escolher o eSaaS?" />
+            <div className="flex max-md:flex-col justify-between gap-8">
               <Card1 icon={<PiHandCoins />} title="Economia para o Seu Negócio" description="Tenha acesso a uma solução de gestão completa por apenas R$25,00 por licença, ajudando a reduzir os custos operacionais." />
-              <Card1 icon={<FaRegUser/>} title="Acesso Livre para os Usuários" description="Usuários adicionais não representam custo extra. Convide quantos colaboradores precisar, sem impacto no seu orçamento." />
-              <Card1 icon={<FiTrendingUp/>} title="Flexibilidade e Escalabilidade" description="Adapte-se facilmente às necessidades do seu negócio, crescendo de forma escalável e sem preocupações financeiras." />
+              <Card1 icon={<FaRegUser />} title="Acesso Livre para os Usuários" description="Usuários adicionais não representam custo extra. Convide quantos colaboradores precisar, sem impacto no seu orçamento." />
+              <Card1 icon={<FiTrendingUp />} title="Flexibilidade e Escalabilidade" description="Adapte-se facilmente às necessidades do seu negócio, crescendo de forma escalável e sem preocupações financeiras." />
             </div>
             <div className="w-full flex justify-center mt-10">
               <MainButton2 />
@@ -64,43 +64,52 @@ export default function Home() {
         </div>
 
         <MainWrapper>
-          <SideImage
-            title="Servidores ultra-seguros e confiáveis"
-            description="Com servidores ultra-seguros e confiáveis na nuvem, fornecidos pela AWS Amazon, nossa plataforma white label de software SaaS oferece uma infraestrutura sólida para seu negócio. A segurança de nossos servidores protege os dados com padrões avançados, fornecendo criptografia, backups regulares e monitoramento constante. Isso garante a integridade e disponibilidade contínua dos seus serviços, mantendo a confiança de seus clientes. Ao adotar nossa solução, você obtém a tranquilidade necessária para se concentrar no crescimento, enquanto nós lidamos com a segurança e a confiabilidade."
-            imgName="bg-img-database"
-            alt="" />
-          <SideImage
-            title="Amplamente aprovado por nossos clientes"
-            imgName="bg-img-clientes"
-            description="O eSaaS é um braço da VendaERP, empresa pioneira no fornecimento de software SaaS no Brasil. Com atuação no mercado desde 2017, a VendaERP construiu uma sólida reputação, atendendo mais de 2.000 parceiros ativos. Nosso compromisso com a excelência reflete-se na ótima avaliação no Reclame Aqui, reforçando nossa dedicação à satisfação e segurança dos clientes. Ao escolher nossa plataforma, você se beneficia de uma infraestrutura confiável e uma equipe experiente, garantindo a tranquilidade necessária para impulsionar seu sucesso. "
-            alt=""
-            invert={true} />
-          <SideImage
-            title="Sua marca, sua identidade"
-            description="Ao vender software SaaS com a sua marca, você fortalece a presença e o reconhecimento de sua empresa no mercado. Oferecer soluções white label permite que você personalize completamente a experiência, adaptando cores, logotipo e mensagens ao perfil do seu público. Essa flexibilidade proporciona um diferencial competitivo, promovendo um relacionamento mais próximo e confiável com seus clientes. Além disso, a identidade própria aumenta o valor percebido, gerando maior fidelidade e facilitando a expansão da sua base de clientes. Com nossa solução, você pode construir um negócio único e altamente reconhecível."
-            imgName="bg-img-erp"
-            alt="" />
+          <div className="flex flex-col max-md:gap-8 max-md:py-8">
+            <SideImage
+              title="Servidores ultra-seguros e confiáveis"
+              imgName="bg-img-database"
+              alt="" >
+              Com servidores ultra-seguros na nuvem da AWS Amazon, nossa plataforma white label SaaS oferece segurança avançada e confiabilidade.<br />
+              Com criptografia, backups regulares e monitoramento constante, garantimos a integridade dos seus dados e a confiança dos clientes, permitindo que você se concentre no crescimento do seu negócio.
+            </SideImage>
+            <SideImage
+              title="Amplamente aprovado por nossos clientes"
+              imgName="bg-img-clientes"
+              alt=""
+              invert={true}>
+              O eSaaS, parte da VendaERP, líder em software SaaS no Brasil desde 2017, oferece uma infraestrutura confiável. Com mais de 2.000 parceiros ativos e uma excelente reputação no Reclame Aqui, nossa plataforma reflete nosso compromisso com a satisfação e segurança dos clientes.<br />
+              Escolha nossa solução para desfrutar da tranquilidade necessária para impulsionar seu sucesso, com uma equipe experiente ao seu lado.          </SideImage>
+            <SideImage
+              title="Sua marca, sua identidade"
+              imgName="bg-img-erp"
+              alt="">
+              Vender software SaaS com sua marca fortalece sua presença no mercado, oferecendo soluções white label para personalizar completamente a experiência do usuário. Essa flexibilidade proporciona um diferencial competitivo ao promover um relacionamento mais próximo com os clientes, aumentando a fidelidade e facilitando a expansão da base de clientes.<br />
+              Com nossa solução, você constrói um negócio único e altamente reconhecível.
+            </SideImage>
+          </div>
+
+
         </MainWrapper>
 
-        <div id="funcionalidades" className="w-full h-[1100px] bg-main-secondary-800 pt-20">
+        <div id="funcionalidades" className="w-full md:h-[1100px] max-md:pb-8 bg-main-secondary-800 pt-20">
           <MainWrapper>
             <Subtitle color="text-white" text="Conheça noossas principais funcionalidades" />
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-2 gap-5 max-w-[800px] w-full">
+              <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 max-w-[800px] w-full">
                 <Card2 title="Fiscal" icon={<BsTags />} description="Emissão de NF-e, NFS-e, MDF-e, NFC-e, CF-e SAT. E também temos SPED Fiscal!" />
                 <Card2 title="Vendas" icon={<BsGraphUpArrow />} description="Orçamentos e pedidos, marketplaces, PDV, Loja Online, Força de vendas." />
-                <Card2 title="Compras" icon={<TbShoppingCart />} description="Ordem de compra, nota de entrada, alerta de estoque, leilão fornecedores."/>
-                <Card2 title="Estoque" icon={<BsBoxSeam />} description="Gestão de múltiplos depósitos, tabelas de preço, movimentações, catálogo."/>
-                <Card2 title="Financeiro" icon={<MdAttachMoney  />} description="Lançamentos financeiros, cobranças integradas, remessas, boletos, bancos!"/>
-                <Card2 title="Produção" icon={<GoGear />} description="Ordens de produção, estoque, insumos e matéria-prima, gestão de qualidade."/>
+                <Card2 title="Compras" icon={<TbShoppingCart />} description="Ordem de compra, nota de entrada, alerta de estoque, leilão fornecedores." />
+                <Card2 title="Estoque" icon={<BsBoxSeam />} description="Gestão de múltiplos depósitos, tabelas de preço, movimentações, catálogo." />
+                <Card2 title="Financeiro" icon={<MdAttachMoney />} description="Lançamentos financeiros, cobranças integradas, remessas, boletos, bancos!" />
+                <Card2 title="Produção" icon={<GoGear />} description="Ordens de produção, estoque, insumos e matéria-prima, gestão de qualidade." />
                 <Card2 title="Logística" icon={<VscTools />} description="Movimentações de estoque, SIGEP Web, relatórios, veículos, delivery integrado." />
-                <Card2 title="Serviços" icon={<GoStack />} description="Emissão de NFS-e, gestão de contratos, ordens de serviços, técnicos, frotas."/>
+                <Card2 title="Serviços" icon={<GoStack />} description="Emissão de NFS-e, gestão de contratos, ordens de serviços, técnicos, frotas." />
               </div>
             </div>
           </MainWrapper>
         </div>
 
-        <div id="preco" className="w-full h-[1000px] bg-gradient-price pt-20">
+        <div id="preco" className="w-full md:h-[1000px] max-md:pb-8 bg-gradient-price pt-20">
           <MainWrapper>
             <Subtitle color="text-white" text="Uma solução que cabe no seu bolso" />
             <div className="w-full flex justify-center ">
@@ -110,37 +119,37 @@ export default function Home() {
                 <div className="relative flex py-3 items-center">
                   <div className="flex-grow border-t border-zync-300"></div>
                 </div>
-                <BenefitItem title="Software ERP SaaS Completo">Desfrute de todas as funcionalidades oferecidas pelo ESAAS, personalizando a interface com o nome e as cores da sua marca para um produto único que pode ser revendido facilmente.</BenefitItem>
+                <BenefitItem title="Software ERP SaaS Completo">Desfrute de todas as funcionalidades oferecidas pelo eSaaS, personalizando a interface com o nome e as cores da sua marca para um produto único que pode ser revendido facilmente.</BenefitItem>
                 <BenefitItem title="Painel de Licenças">Gerencie e monitore suas licenças de maneira simplificada, centralizando o controle de todas as licenças vendidas em um painel intuitivo.</BenefitItem>
                 <BenefitItem title="Servidores na Nuvem Seguros e Reconhecidos">Armazene seus dados com segurança em servidores robustos e reconhecidos, garantindo proteção e confiabilidade para suas operações na nuvem.</BenefitItem>
                 <BenefitItem title="Treinamentos Inclusos">
-                  Participe do nosso canal no Discord para acessar treinamentos personalizados que potencializam a produtividade e o domínio das funcionalidades do ESAAS. 
-                  <Link className="text-black underline px-1" href="https://discord.gg/">Acesse nosso Discord</Link>
+                  Participe do nosso canal no Discord para acessar treinamentos personalizados que potencializam a produtividade e o domínio das funcionalidades do eSaaS.
+                  <Link className="text-black underline px-1" href="https://discord.gg/" target="_blank">Acesse nosso Discord</Link>
                 </BenefitItem>
-                <BenefitItem title="Suporte Especializado">Conte com suporte humanizado e altamente especializado, oferecido diretamente no Discord para atender todas as suas necessidades técnicas e estratégicas. 
-                <Link className="text-black underline px-1" href="https://discord.gg/">Acesse nosso Discord</Link>
+                <BenefitItem title="Suporte Especializado">Conte com suporte humanizado e altamente especializado, oferecido diretamente no Discord para atender todas as suas necessidades técnicas e estratégicas.
+                  <Link className="text-black underline px-1" href="https://discord.gg/" target="_blank">Acesse nosso Discord</Link>
                 </BenefitItem>
                 <div className="w-full flex justify-center mt-7">
                   <MainButton2 />
                 </div>
-                
+
               </div>
             </div>
 
           </MainWrapper>
         </div>
 
-        <div id="contato" className="w-full h-[700px] bg-white pt-20">
+        <div id="contato" className="w-full md:h-[700px] bg-white pt-20">
           <MainWrapper>
-            <div className={'flex h-[500px]'}>
-              <div className='w-1/2 flex flex-col justify-center items-center'>
+            <div className={'flex md:h-[500px] max-md:flex-col'}>
+              <div className='md:w-1/2 max-md:mb-8 flex flex-col justify-center items-center'>
                 <h3 className='text-4xl font-semibold text-main-primary-500 w-10/12 text-center'>Ficou com alguma dúvida?</h3>
                 <p className='text-main-primary-500 text-2xl w-10/12 text-center'>Entre em contato com a gente!</p>
-                <LuMoveRight className="text-6xl text-main-secondary-800" />
+                <LuMoveRight className="hidden md:block text-6xl text-main-secondary-800" />
               </div>
-              <div className='w-1/2 overflow-hidden bg-main-secondary-800 rounded-2xl p-12 flex items-center'>
+              <div className='md:w-1/2 overflow-hidden bg-main-secondary-800 rounded-2xl p-12 flex items-center'>
                 <div className="w-full">
-                  <ContactItem icon={<FiPhone />} title="Telefone" contact="51999999999" description="Atendemos na segunda a sexta das 8 as 20h e aos sábados de 8 as 12h através do número abaixo." />
+                  <ContactItem href="https://wa.me/15551234567" icon={<FiPhone />} title="Telefone" contact="51999999999" description="Atendemos na segunda a sexta das 8 as 20h e aos sábados de 8 as 12h através do número abaixo." />
                   <div className="relative py-4">
                     <div className="absolute inset-0 flex items-center">
                       <div className="w-full border-b border-gray-500"></div>
@@ -149,7 +158,7 @@ export default function Home() {
                       <span className="bg-main-secondary-800 px-4 text-sm text-gray-500">ou</span>
                     </div>
                   </div>
-                  <ContactItem icon={<MdOutlineEmail />} title="Email" contact="comercial@esaas.com.br" description="Ficou com alguma dúvida? Entre em contato com a gente pelo nosso email." />
+                  <ContactItem href="mailto:comercial@esaas.com.br" icon={<MdOutlineEmail />} title="Email" contact="comercial@esaas.com.br" description="Ficou com alguma dúvida? Entre em contato com a gente pelo nosso email." />
                 </div>
               </div>
             </div>
