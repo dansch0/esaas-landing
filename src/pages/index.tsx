@@ -127,10 +127,10 @@ Ao vender software SaaS com sua marca, você fortalece a presença da empresa. P
                 <BenefitItem title="Servidores na Nuvem Seguros e Reconhecidos">Armazene seus dados com segurança em servidores robustos e reconhecidos, garantindo proteção e confiabilidade para suas operações na nuvem.</BenefitItem>
                 <BenefitItem title="Treinamentos Inclusos">
                   Participe do nosso canal no Discord para acessar treinamentos personalizados que potencializam a produtividade e o domínio das funcionalidades do eSaaS.
-                  <Link className="text-black underline px-1" href="https://discord.gg/" target="_blank">Acesse nosso Discord</Link>
+                  <Link className="text-black underline px-1" href="https://discord.gg/Hjv32PzP8g" target="_blank">Acesse nosso Discord</Link>
                 </BenefitItem>
                 <BenefitItem title="Suporte Especializado">Conte com suporte humanizado e altamente especializado, oferecido diretamente no Discord para atender todas as suas necessidades técnicas e estratégicas.
-                  <Link className="text-black underline px-1" href="https://discord.gg/" target="_blank">Acesse nosso Discord</Link>
+                  <Link className="text-black underline px-1" href="https://discord.gg/CG8AvvWzKF" target="_blank">Acesse nosso Discord</Link>
                 </BenefitItem>
                 <div className="w-full flex justify-center mt-7">
                   <MainButton2 />
@@ -150,9 +150,9 @@ Ao vender software SaaS com sua marca, você fortalece a presença da empresa. P
                 <p className='text-main-primary-500 text-2xl w-10/12 text-center'>Entre em contato com a gente!</p>
                 <LuMoveRight className="hidden md:block text-6xl text-main-secondary-800" />
               </div>
-              <div className='md:w-1/2 overflow-hidden bg-main-secondary-800 rounded-2xl p-12 flex items-center'>
+              <div className='md:w-1/2 overflow-hidden bg-main-secondary-800 rounded-2xl p-12 max-md:p-9 flex items-center'>
                 <div className="w-full">
-                  <ContactItem href="https://wa.me/15551234567" icon={<FiPhone />} title="Telefone" contact="51999999999" description="Atendemos na segunda a sexta das 8 as 20h e aos sábados de 8 as 12h através do número abaixo." />
+                  <ContactItem href="https://wa.me/51999801351" icon={<FiPhone />} title="Telefone" contact="(51) 9 99801351" description="Atendemos de segunda a sexta das 8h as 18h através do WhatsApp abaixo" />
                   <div className="relative py-4">
                     <div className="absolute inset-0 flex items-center">
                       <div className="w-full border-b border-gray-500"></div>
