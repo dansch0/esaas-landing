@@ -152,7 +152,7 @@ Ao vender software SaaS com sua marca, você fortalece a presença da empresa. P
               </div>
               <div className='md:w-1/2 overflow-hidden bg-main-secondary-800 rounded-2xl p-12 max-md:p-9 flex items-center'>
                 <div className="w-full">
-                  <ContactItem href="https://wa.me/5551999801351" icon={<FiPhone />} title="Telefone" contact="(51) 9 99801351" description="Atendemos de segunda a sexta das 8h as 18h através do WhatsApp abaixo" />
+                  <ContactItem href="https://wa.me/5551999801351" icon={<FiPhone />} title="WhatsApp" contact="(51) 9 99801351" description="Atendemos de segunda a sexta das 8h as 18h através do WhatsApp abaixo" />
                   <div className="relative py-4">
                     <div className="absolute inset-0 flex items-center">
                       <div className="w-full border-b border-gray-500"></div>
