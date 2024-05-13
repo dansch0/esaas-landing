@@ -7,7 +7,7 @@ export interface IMainButtonProps {
 
 export function MainButton (props: IMainButtonProps) {
   return (
-    <Link href={"https://wa.me/51999801351"} className='w-[160px] select-none font-semibold flex justify-center items-center gap-1 bg-green-600 text-white px-3 py-2 rounded-full opacity-1 hover:opacity-70 transition-all duration-300'>
+    <Link href={"https://wa.me/5551999801351"} className='w-[160px] select-none font-semibold flex justify-center items-center gap-1 bg-green-600 text-white px-3 py-2 rounded-full opacity-1 hover:opacity-70 transition-all duration-300'>
       
       Conheça
       <FaWhatsapp/>
